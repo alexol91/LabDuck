@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{9360D874-D6D4-48D6-AD20-53CC87DAF542}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E1085FBB-ECB6-454A-897B-9430CFCAF005}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FB083FAE-9A5C-417B-895C-AAA61475C041}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{03937D32-C573-4590-86FB-73868EDBF517}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{3893A5D6-762D-4F04-9935-70DDDEDDCBEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabDuck.Generator", "LabDuck.Generator\LabDuck.Generator.csproj", "{D5172EF0-0423-45FC-980D-184E3703D025}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "git", "git", "{42BB0FF0-2B2B-435D-8070-14D1B9086341}"
+	ProjectSection(SolutionItems) = preProject
+		..\docs\git\CommitMessageConventions.md = ..\docs\git\CommitMessageConventions.md
+		..\docs\git\FolderStructureConventions.md = ..\docs\git\FolderStructureConventions.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D39C44C2-3B43-4FC2-8141-F1F898FBE5DC}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5172EF0-0423-45FC-980D-184E3703D025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5172EF0-0423-45FC-980D-184E3703D025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5172EF0-0423-45FC-980D-184E3703D025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5172EF0-0423-45FC-980D-184E3703D025}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D5172EF0-0423-45FC-980D-184E3703D025} = {FB083FAE-9A5C-417B-895C-AAA61475C041}
+		{42BB0FF0-2B2B-435D-8070-14D1B9086341} = {E1085FBB-ECB6-454A-897B-9430CFCAF005}
+	EndGlobalSection
+EndGlobal
