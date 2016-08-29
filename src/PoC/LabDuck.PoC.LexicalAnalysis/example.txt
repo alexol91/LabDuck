@@ -1,0 +1,22 @@
+﻿public class Example1 
+{
+	public bool Method1()
+	{
+		var num1 = 5;
+		if(num1 == 5)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	public void MethodChain(var name = "Gallardo mola")
+	{
+		var surname = "Oñate también '+ o -'";
+	}
+
+	public void Method1_1(var num2 = 3)
+	{
+		var num1 = 5+num2;
+	}
+}
