@@ -1,4 +1,4 @@
-﻿namespace LabDuck.PoC.LexicalAnalysis.Enums
+﻿namespace LabDuck.Domain.Enums
 {
     public enum TokenType
     {

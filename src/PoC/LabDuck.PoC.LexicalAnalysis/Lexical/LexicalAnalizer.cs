@@ -1,8 +1,8 @@
-﻿using LabDuck.PoC.LexicalAnalysis.Enums;
+﻿using LabDuck.Domain.Enums;
+using LabDuck.Domain.Lexical;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
