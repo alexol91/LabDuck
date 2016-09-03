@@ -1,5 +1,11 @@
 ﻿public class Example1 
 {
+	// Los comentarios molan
+
+	/* Pero molan más cuando
+	los puedes hacer en varias 
+	líneas */
+
 	public bool Method1()
 	{
 		var num1 = 5;

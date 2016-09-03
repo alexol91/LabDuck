@@ -76,7 +76,7 @@ namespace LabDuck.PoC.LexicalAnalysis.Lexical
         private void LoadTokenDefinitions(string tokenDefinitionsJson)
         {
             tokenDefinitions = JsonConvert.DeserializeObject<List<TokenDefinition>>(tokenDefinitionsJson)
-                .OrderByDescending(toke => toke.Type);
+                .OrderBy(toke => toke.Type);
         }
     }
 }

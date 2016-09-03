@@ -20,86 +20,107 @@
     "Type": "Ignored"
   },
   {
+    "name": "var",
     "regex": "var\\b",
     "Type": "ReservedWord"
   },
   {
+    "name": "if",
     "regex": "if\\b",
     "Type": "ReservedWord"
   },
   {
+    "name": "public",
     "regex": "public\\b",
     "Type": "ReservedWord"
   },
   {
+    "name": "class",
     "regex": "class\\b",
     "Type": "ReservedWord"
   },
   {
+    "name": "void",
     "regex": "void\\b",
     "Type": "ReservedWord"
   },
   {
+    "name": "return",
     "regex": "return\\b",
     "Type": "ReservedWord"
   },
   {
+    "name": "bool",
     "regex": "bool\\b",
     "Type": "ReservedWord"
   },
   {
+    "name": "true",
     "regex": "true\\b",
     "Type": "ReservedWord"
   },
   {
+    "name": "false",
     "regex": "false\\b",
     "Type": "ReservedWord"
   },
   {
+    "name": "{",
     "regex": "\\{",
     "Type": "Symbol"
   },
   {
+    "name": "}",
     "regex": "\\}",
     "Type": "Symbol"
   },
   {
+    "name": ";",
     "regex": ";",
     "Type": "Symbol"
   },
   {
+    "name": "(",
     "regex": "\\(",
     "Type": "Symbol"
   },
   {
+    "name": ")",
     "regex": "\\)",
     "Type": "Symbol"
   },
   {
+    "name": "+",
     "regex": "\\+",
     "Type": "Operator"
   },
   {
+    "name": "+=",
     "regex": "\\+=",
     "Type": "Operator"
   },
   {
+    "name": "==",
     "regex": "==",
     "Type": "Operator"
   },
   {
+    "name": "=",
     "regex": "=",
     "Type": "Operator"
   },
   {
+    "name": "Chain",
     "regex": "\\\"[^\\\"]*\\\"",
     "Type": "Chain"
   },
   {
+    "name": "Id",
     "regex": "[a-zA-Z][a-zA-Z0-9_]*",
     "Type": "Id"
   },
   {
+    "name": "Integer",
     "regex": "[0-9]+",
     "Type": "Integer"
   }
