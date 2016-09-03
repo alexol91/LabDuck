@@ -1,4 +1,5 @@
-﻿using LabDuck.PoC.LexicalAnalysis.Lexical;
+﻿using LabDuck.Domain.Lexical;
+using LabDuck.PoC.LexicalAnalysis.Lexical;
 using System;
 using System.Collections.Generic;
 using System.IO;

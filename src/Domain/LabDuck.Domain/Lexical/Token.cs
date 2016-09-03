@@ -1,6 +1,6 @@
-﻿using LabDuck.PoC.LexicalAnalysis.Enums;
+﻿using LabDuck.Domain.Enums;
 
-namespace LabDuck.PoC.LexicalAnalysis.Lexical
+namespace LabDuck.Domain.Lexical
 {
     public class Token
     {
