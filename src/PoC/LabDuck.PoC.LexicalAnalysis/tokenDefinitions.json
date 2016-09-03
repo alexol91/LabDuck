@@ -1,38 +1,58 @@
 ﻿[
   {
-    "regex": "var",
+    "name": "End of Line",
+    "regex": "[\\n]+",
+    "Type": "EOL"
+  },
+  {
+    "name": "Space",
+    "regex": "[ \\t\\r\\r\\v]+",
+    "Type": "Ignored"
+  },
+  {
+    "name":  "Comment",
+    "regex": "\\/\\/.*",
+    "Type": "Ignored"
+  },
+  {
+    "name":  "Comment Multiline",
+    "regex": "/\\*[^\\*\\/]*\\*\\/",
+    "Type": "Ignored"
+  },
+  {
+    "regex": "var\\b",
     "Type": "ReservedWord"
   },
   {
-    "regex": "if",
+    "regex": "if\\b",
     "Type": "ReservedWord"
   },
   {
-    "regex": "public",
+    "regex": "public\\b",
     "Type": "ReservedWord"
   },
   {
-    "regex": "class",
+    "regex": "class\\b",
     "Type": "ReservedWord"
   },
   {
-    "regex": "void",
+    "regex": "void\\b",
     "Type": "ReservedWord"
   },
   {
-    "regex": "return",
+    "regex": "return\\b",
     "Type": "ReservedWord"
   },
   {
-    "regex": "bool",
+    "regex": "bool\\b",
     "Type": "ReservedWord"
   },
   {
-    "regex": "true",
+    "regex": "true\\b",
     "Type": "ReservedWord"
   },
   {
-    "regex": "false",
+    "regex": "false\\b",
     "Type": "ReservedWord"
   },
   {
@@ -72,7 +92,7 @@
     "Type": "Operator"
   },
   {
-    "regex": "\"[^\"]*\"",
+    "regex": "\\\"[^\\\"]*\\\"",
     "Type": "Chain"
   },
   {

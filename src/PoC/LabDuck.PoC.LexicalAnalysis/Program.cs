@@ -16,8 +16,14 @@ namespace LabDuck.PoC.LexicalAnalysis
             var text = File.ReadAllText(ExampleFileName);
             var tokenDefinitionsJson = File.ReadAllText(TokeDefinitionFileName);
             LexicalAnalizer analizer = new LexicalAnalizer(tokenDefinitionsJson);
-            var tokens = analizer.Analyze(text);
-            Verbose(text, tokens);
+            try
+            {
+                var tokens = analizer.Analyze(text);
+                Verbose(text, tokens);
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.ReadKey();
         }
 
@@ -31,7 +37,7 @@ namespace LabDuck.PoC.LexicalAnalysis
             Console.WriteLine();
             foreach (var token in tokens)
             {
-                Console.WriteLine($"{token.Lexema}\t\t:{token.Type}");
+                Console.WriteLine($"{token.Lexema}\t\t:{token.Type}\t\t{token.Row}:{token.Column}");
             }
         }
     }
