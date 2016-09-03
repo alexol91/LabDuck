@@ -1,5 +1,6 @@
 ﻿using LabDuck.PoC.LexicalAnalysis.Enums;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace LabDuck.PoC.LexicalAnalysis.Lexical
 {
     public class LexicalAnalizer
     {
-        private List<TokenDefinition> tokenDefinitions;
+        private IEnumerable<TokenDefinition> tokenDefinitions;
 
         public LexicalAnalizer(string tokenDefinitionsJson)
         {
@@ -18,42 +19,64 @@ namespace LabDuck.PoC.LexicalAnalysis.Lexical
 
         public List<Token> Analyze(string text)
         {
+            int column = 0;
+            int row = 0;
             List<Token> tokens = new List<Token>();
 
             while (!string.IsNullOrEmpty(text))
             {
-                var token = GetMatchToken(text);
-                if (token != null)
+                try
                 {
-                    text = text.Remove(0, token.Lexema.Length);
-                    tokens.Add(token);
+                    Token token = GetMatchToken(text);
+                    int tokenLength = token.Lexema.Length;
+                    column += tokenLength;
+                    text = text.Remove(0, tokenLength);
+                    if (token.Type != TokenType.Ignored)
+                    {
+                        if(token.Type != TokenType.EOL)
+                        {
+                            token.Row = row;
+                            token.Column = column - tokenLength;
+                            tokens.Add(token);
+                        }
+                        else
+                        {
+                            ++row;
+                            column = 0;
+                        }
+                    }
                 }
-                else
+                catch (Exception e)
                 {
-                    text = text.Remove(0, 1);
+                    throw new Exception($"[Token not found] column: {column} row: {row} in '{text.Substring(0, text.IndexOf('\n'))}'", e);
                 }
             }
+            tokens.Add(new Token { Type = TokenType.EOL });
             return tokens;
         }
 
         private Token GetMatchToken(string text)
         {
-            List<Token> tokens = new List<Token>();
-            foreach (var tokenDefinition in tokenDefinitions)
+            Match match = null;
+            var tokenFound = tokenDefinitions.FirstOrDefault(tokenDefinition =>
             {
                 Regex regex = new Regex($"^{tokenDefinition.RegularExpression}");
-                var match = regex.Match(text);
-                if (match.Success)
-                {
-                    tokens.Add(new Token() { Type = tokenDefinition.Type, Lexema = match.Value });
-                }
+                match = regex.Match(text);
+                return match.Success;
+            });
+
+            if (tokenFound == null)
+            {
+                throw new Exception("Token not found");
             }
-            return tokens.OrderByDescending(token => token.Lexema.Length).FirstOrDefault();
+
+            return new Token { Type = tokenFound.Type, Lexema = match.Value };
         }
 
         private void LoadTokenDefinitions(string tokenDefinitionsJson)
         {
-            tokenDefinitions = JsonConvert.DeserializeObject<List<TokenDefinition>>(tokenDefinitionsJson);
+            tokenDefinitions = JsonConvert.DeserializeObject<List<TokenDefinition>>(tokenDefinitionsJson)
+                .OrderByDescending(toke => toke.Type);
         }
     }
 }

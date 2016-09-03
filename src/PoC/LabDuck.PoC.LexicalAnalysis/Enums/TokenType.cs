@@ -2,6 +2,9 @@
 {
     public enum TokenType
     {
+        EOL,
+        EOF,
+        Ignored,
         ReservedWord,
         Id,
         Operator,
