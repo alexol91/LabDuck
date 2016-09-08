@@ -8,6 +8,8 @@ namespace LabDuck.Domain.Lexical
     {
         [JsonProperty("regex")]
         public string RegularExpression { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
         [JsonConverter(typeof(StringEnumConverter))]
         public TokenType Type { get; set; }
     }
