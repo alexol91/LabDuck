@@ -10,6 +10,7 @@
         Operator,
         Symbol,
         Chain,
+        Float,
         Integer
     }
 }
