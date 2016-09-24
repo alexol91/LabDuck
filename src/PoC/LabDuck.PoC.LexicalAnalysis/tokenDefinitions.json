@@ -1,127 +1,72 @@
 ﻿[
   {
-    "name": "End of Line",
-    "regex": "[\\n]+",
-    "Type": "EOL"
-  },
-  {
-    "name": "Space",
-    "regex": "[ \\t\\r\\r\\v]+",
-    "Type": "Ignored"
-  },
-  {
-    "name":  "Comment",
-    "regex": "\\/\\/.*",
-    "Type": "Ignored"
-  },
-  {
-    "name":  "Comment Multiline",
-    "regex": "/\\*[^\\*\\/]*\\*\\/",
-    "Type": "Ignored"
-  },
-  {
-    "name": "var",
-    "regex": "var\\b",
-    "Type": "ReservedWord"
-  },
-  {
-    "name": "if",
-    "regex": "if\\b",
-    "Type": "ReservedWord"
-  },
-  {
-    "name": "public",
     "regex": "public\\b",
+    "name": "public",
     "Type": "ReservedWord"
   },
   {
-    "name": "class",
-    "regex": "class\\b",
+    "regex": "static\\b",
+    "name": "static",
     "Type": "ReservedWord"
   },
   {
-    "name": "void",
     "regex": "void\\b",
+    "name": "void",
     "Type": "ReservedWord"
   },
   {
-    "name": "return",
-    "regex": "return\\b",
-    "Type": "ReservedWord"
-  },
-  {
-    "name": "bool",
-    "regex": "bool\\b",
-    "Type": "ReservedWord"
-  },
-  {
-    "name": "true",
-    "regex": "true\\b",
-    "Type": "ReservedWord"
-  },
-  {
-    "name": "false",
-    "regex": "false\\b",
-    "Type": "ReservedWord"
-  },
-  {
-    "name": "{",
-    "regex": "\\{",
-    "Type": "Symbol"
-  },
-  {
-    "name": "}",
-    "regex": "\\}",
-    "Type": "Symbol"
-  },
-  {
-    "name": ";",
-    "regex": ";",
-    "Type": "Symbol"
-  },
-  {
-    "name": "(",
-    "regex": "\\(",
-    "Type": "Symbol"
-  },
-  {
-    "name": ")",
-    "regex": "\\)",
-    "Type": "Symbol"
-  },
-  {
-    "name": "+",
-    "regex": "\\+",
-    "Type": "Operator"
-  },
-  {
-    "name": "+=",
-    "regex": "\\+=",
-    "Type": "Operator"
-  },
-  {
-    "name": "==",
-    "regex": "==",
-    "Type": "Operator"
-  },
-  {
-    "name": "=",
-    "regex": "=",
-    "Type": "Operator"
-  },
-  {
-    "name": "Chain",
-    "regex": "\\\"[^\\\"]*\\\"",
-    "Type": "Chain"
-  },
-  {
+    "regex": "[a-zA-Z](\\w)+\\b",
     "name": "Id",
-    "regex": "[a-zA-Z][a-zA-Z0-9_]*",
     "Type": "Id"
   },
   {
-    "name": "Integer",
-    "regex": "[0-9]+",
+    "regex": "\\(",
+    "name": "pari",
+    "Type": "Symbol"
+  },
+  {
+    "regex": "\\)",
+    "name": "pard",
+    "Type": "Symbol"
+  },
+  {
+    "regex": "\\{",
+    "name": "llavei",
+    "Type": "Symbol"
+  },
+  {
+    "regex": "\\}",
+    "name": "llaved",
+    "Type": "Symbol"
+  },
+  {
+    "regex": "[\\+|\\-]",
+    "name": "addop",
+    "Type": "Operator"
+  },
+  {
+    "regex": "[\\*|\\/]",
+    "name": "mulop",
+    "Type": "Operator"
+  },
+  {
+    "regex": "\\d",
+    "name": "entero",
     "Type": "Integer"
+  },
+  {
+    "regex": "\\d*\\.\\d",
+    "name": "real",
+    "Type": "Float"
+  },
+  {
+    "regex": "[\\n]+",
+    "name": "EOL",
+    "Type": "EOL"
+  },
+  {
+    "regex": "[ \\t\\r\\r\\v]+",
+    "name": "Spaces",
+    "Type": "Ignored"
   }
 ]

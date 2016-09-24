@@ -42,6 +42,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{D80C75EB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabDuck.LexicalEditor", "Tools\LabDuck.LexicalEditor\LabDuck.LexicalEditor.csproj", "{EE79C252-9C53-4726-953A-AFC2B54C295D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabDuck.PoC.SyntacticAnalyzer", "PoC\LabDuck.PoC.SyntacticAnalyzer\LabDuck.PoC.SyntacticAnalyzer.csproj", "{C9609442-654F-4279-97D6-8791F9C3C5AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{EE79C252-9C53-4726-953A-AFC2B54C295D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE79C252-9C53-4726-953A-AFC2B54C295D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE79C252-9C53-4726-953A-AFC2B54C295D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9609442-654F-4279-97D6-8791F9C3C5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9609442-654F-4279-97D6-8791F9C3C5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9609442-654F-4279-97D6-8791F9C3C5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9609442-654F-4279-97D6-8791F9C3C5AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,5 +84,6 @@ Global
 		{D5172EF0-0423-45FC-980D-184E3703D025} = {B1E824E8-8652-48A0-907E-89CB5029C75D}
 		{D80C75EB-E4D4-47C0-B61C-9008D6D063FE} = {FB083FAE-9A5C-417B-895C-AAA61475C041}
 		{EE79C252-9C53-4726-953A-AFC2B54C295D} = {D80C75EB-E4D4-47C0-B61C-9008D6D063FE}
+		{C9609442-654F-4279-97D6-8791F9C3C5AE} = {1FDE5D1E-EB76-4AA0-909A-A3675A282274}
 	EndGlobalSection
 EndGlobal
